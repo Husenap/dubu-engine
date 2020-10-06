@@ -19,6 +19,9 @@ option(${PROJECT_NAME}_BUILD_TESTS
 include("thirdparty/dubu_log.cmake")
 
 add_subdirectory("dubu_engine")
+add_subdirectory("dubu_editor")
+
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT "dubu_editor")
 
 if(${${PROJECT_NAME}_BUILD_TESTS})
     enable_testing()

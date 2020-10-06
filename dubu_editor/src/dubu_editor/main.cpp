@@ -1,6 +1,7 @@
 #include <dubu_engine/dubu_engine.h>
-#include <gtest/gtest.h>
 
-TEST(dubu_engine, engine) {
+int main() {
 	auto engine = std::make_unique<dubu::engine::Engine>();
+
+	return 0;
 }

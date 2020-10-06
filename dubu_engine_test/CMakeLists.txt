@@ -6,7 +6,8 @@ set(src_files
 add_executable(${target_name} ${src_files})
 
 target_link_libraries(${target_name}
-    gmock_main)
+    gmock_main
+    dubu_engine)
 
 set_target_properties(${target_name} PROPERTIES FOLDER ${${PROJECT_NAME}_FOLDER}/test)
 

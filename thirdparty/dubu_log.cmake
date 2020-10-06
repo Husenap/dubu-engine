@@ -7,7 +7,7 @@ FetchContent_Declare(
     GIT_TAG         v1.0
 )
 
-set(dubu_log_BUILD_TESTS OFF)
-set(dubu_log_FOLDER "thirdparty/dubu_log")
+set(dubu_log_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(dubu_log_FOLDER "thirdparty/dubu_log" CACHE STRING "" FORCE)
 
 FetchContent_MakeAvailable(dubu_log)
