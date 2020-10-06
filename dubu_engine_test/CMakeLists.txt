@@ -1,4 +1,4 @@
-set(target_name "project_name_test")
+set(target_name "dubu_engine_test")
 
 set(src_files
     "src/unit.cpp")
