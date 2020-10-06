@@ -3,7 +3,7 @@ set(target_name "dubu_engine")
 set(src_precompiled
     "src/dubu_engine/precompiled.h")
 
-set(src_dubu_engine)
+set(src_dubu_engine
     "src/dubu_engine/dubu_engine.h")
 
 set(src_files
