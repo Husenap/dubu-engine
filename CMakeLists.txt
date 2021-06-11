@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project("project_name" C CXX)
+project("dubu_engine" C CXX)
 
 include("cmake/prevent_in_source_builds.cmake")
 include("cmake/standard_project_setup.cmake")
@@ -16,11 +16,17 @@ option(${PROJECT_NAME}_BUILD_TESTS
     "If the ${PROJECT_NAME} tests are built in addition to the ${PROJECT_NAME} library."
     ON)
 
-add_subdirectory("project_name")
+include("thirdparty/dubu_log.cmake")
+include("thirdparty/dubu_window.cmake")
+
+add_subdirectory("dubu_engine")
+add_subdirectory("dubu_editor")
+
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT "dubu_editor")
 
 if(${${PROJECT_NAME}_BUILD_TESTS})
     enable_testing()
     include(GoogleTest)
     include("thirdparty/googletest.cmake")
-    add_subdirectory("project_name_test")
+    add_subdirectory("dubu_engine_test")
 endif()
